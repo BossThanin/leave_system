@@ -28,6 +28,14 @@ Route::get('/test-connection', function () {
 Route::get('/leave_system', function () {
     return view('leave_system');
 });
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('admin/home',[HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('admin/home',[HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('role:1');
+    Route::get('/pm/home', [HomeController::class, 'pmHome'])->name('pm.home')->middleware('role:2');
+    Route::get('/employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('role:3');
+});
+
