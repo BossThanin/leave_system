@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +27,17 @@ Route::get('/test-connection', function () {
 Route::get('/leave_system', function () {
     return view('leave_system');
 });
+//authentication เขาคือใคร การ login and authorization การให้ permission การเข้าถึง resouurces ต่างๆ
+//user management system ระบบการจัดการ user 
+//ระบบการจัดการสินค้าคงคลัง 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+route::get('/redirects',[HomeController::class,"index"]);
