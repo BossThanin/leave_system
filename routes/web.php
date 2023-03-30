@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use APP\Http\Controllers\LeaveFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/pm/home', [HomeController::class, 'pmHome'])->name('pm.home')->middleware('role:2');
     Route::get('/employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('role:3');
 });
+Route::get('/leave-form', 'App\Http\Controllers\LeaveFormController@create')->name('leave-form.create');
+Route::post('/leave-form', 'App\Http\Controllers\LeaveFormController@store')->name('leave-form.store');
 
