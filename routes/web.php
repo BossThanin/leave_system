@@ -18,6 +18,9 @@ use APP\Http\Controllers\LeaveFormController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/connection', function () {
+    return view('connection');
+});
 Route::get('/test-connection', function () {
     try {
         DB::connection()->getPdo();

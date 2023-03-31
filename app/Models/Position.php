@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Leavetype extends Model
+class Position extends Model
 {
-    protected $table = 'leavetype';
+    use HasFactory;
+    protected $fillable = [
+        'position_name'
+    ];
 }

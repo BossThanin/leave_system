@@ -15,9 +15,19 @@ class LeaveForm extends Model
         'employee_id',
         'leavetype_id',
         'starts_date',
+        'start_time',
         'end_date',
+        'end_time',
         'comment',
         'image',
     ];
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+    public function leavetype()
+    {
+        return $this->belongsTo(Leavetype::class);
+    }
 }
 
