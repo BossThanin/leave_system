@@ -5,27 +5,9 @@
         <h4>รายละเอียดใบลา</h4>
         <form action="{{ route('leave-form.store') }}" method="post" enctype="multipart/form-data">
         @csrf
-        <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "db_leave_system";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            error_log("Run leaveform.php");
-            $query = "SELECT * FROM users where `role`=1";
-            $result = $conn->query($query);
-            if (!$result) {
-                die("Query failed: " . $conn->error);
-            }
-            while ($row = $result->fetch_assoc()){
-                echo "ชื่อ - นามสกุล","<br/>";
-                echo "<br/>". $row['name'];
-            }
-            $conn->close();
-        ?>
+            <label for="leavetype_id">ชื่อ - นามสกุล:</label>
+            <br><br>
+            {{ Auth::user()->name }}
             <br><br>
             <label for="leavetype_id">ประเภทการลา:</label>
             <br><br>
@@ -60,7 +42,10 @@
                 @endforeach
             </select>
             <br><br>
-            <input type="submit" value="Save">
+            <div style="text-align: right;">
+                <a href="{{ route('home')}}" class="btn" style="background-color: #c2c2c2; color: #fff;">ยกเลิก</a>
+                <input type="submit" class="btn" style="background-color: #00c85a; color: #fff;" value="บันทึก">
+            </div>
         </form>
     </div>
 @endsection

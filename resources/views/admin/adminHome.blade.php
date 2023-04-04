@@ -9,7 +9,7 @@
     <div class="container">
         <h1>ระบบการลาบริษัท BIG DATA AGENCY CO.LDT.</h1>
         <p>You are Admin.</p>
-        <button type="button" class="btn" style="background-color: #a3c3b5; color: #fff;"> <a href="/leave-form" style="color: #fff;">เพิ่มใบลา</a></button>
+        <button type="button" class="btn" style="background-color: #a3c3b5; color: #fff;"> <a href="/leave-form" style="color: #fff;">+เพิ่มใบลา</a></button>
         <br><br>
         <?php
             error_log("Run adminhome.php");

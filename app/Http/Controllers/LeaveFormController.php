@@ -18,7 +18,7 @@ class LeaveFormController extends Controller
 
     public function store(Request $request)
     {
-    // Validate the form data
+
     $validatedData = $request->validate([
         'employee_id' => 'required',
         'leavetype_id' => 'required',
@@ -30,29 +30,22 @@ class LeaveFormController extends Controller
         'image' => 'nullable|image|max:2097152',
     ]);    
 
-    // Handle the image upload
     if ($request->hasFile('image')) {
         $image = $request->file('image')->store('public/images');
     } else {
         $image = null;
     }
-
-    // Create a new LeaveForm model and fill it with the form data
-    $leaveForm = new LeaveForm;
-    $leaveForm->employee_id = $validatedData['employee_id'];
-    $leaveForm->leavetype_id = $validatedData['leavetype_id'];
-    $leaveForm->starts_date = $validatedData['starts_date'];
-    $leaveForm->start_time = $validatedData['start_time'];
-    $leaveForm->end_date = $validatedData['end_date'];
-    $leaveForm->end_time = $validatedData['end_time'];
-    $leaveForm->comment = $validatedData['comment'];
-    $leaveForm->image = $image;
-
-
-    // Save the leave form data to the database
-    $leaveForm->save();
-    $leaveForms = LeaveForm::with('Employee', 'Leavetype')->get();
-    // Redirect to the success page
-    return view('connection',compact('leaveForms'));
+        $leaveForm = new LeaveForm;
+        $leaveForm->employee_id = $validatedData['employee_id'];
+        $leaveForm->leavetype_id = $validatedData['leavetype_id'];
+        $leaveForm->starts_date = $validatedData['starts_date'];
+        $leaveForm->start_time = $validatedData['start_time'];
+        $leaveForm->end_date = $validatedData['end_date'];
+        $leaveForm->end_time = $validatedData['end_time'];
+        $leaveForm->comment = $validatedData['comment'];
+        $leaveForm->image = $image;
+        $leaveForm->save();
+        $leaveForms = LeaveForm::with('Employee', 'Leavetype')->get();
+        return view('home',compact('leaveForms'));
     }
 }

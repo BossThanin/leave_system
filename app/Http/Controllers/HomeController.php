@@ -28,19 +28,16 @@ class HomeController extends Controller
 
 public function adminHome()
 {
-    $role = 1;
     return view('admin/adminHome');
 }
 
 public function pmHome()
 {
-    $role = 2;
     return view('Project_Manager/pmHome');
 }
 
 public function employeeHome()
 {
-    $role = 3;
     return view('Employee/employeeHome');
 }
 

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Employee;
 use App\Models\User;
 use App\Models\Position;
 use App\Models\Leavetype;
@@ -40,10 +41,10 @@ class CreateUsersSeeder extends Seeder
                 'position_name' => 'Admin'
             ],
             [
-                'position_name' => 'Employee'
+                'position_name' => 'Project_Manager'
             ],
             [
-                'position_name' => 'Project_Manager'
+                'position_name' => 'Employee'
             ]
         ];
 
@@ -76,13 +77,26 @@ class CreateUsersSeeder extends Seeder
                 'leavetype_name' => 'ลาเพื่อการฝึกอบรม'
             ]
         ];  
-  
-        // Insert records into the users table
+        $employee = [
+            [
+                'first_name' => 'Tony',
+                'last_name' => 'Stark',
+                'position_id' => 1
+            ],
+            [
+                'first_name' => 'Thor',
+                'last_name' => 'Odinson',
+                'position_id' => 2
+            ],
+            [
+                'first_name' => 'Captain',
+                'last_name' => 'America',
+                'position_id' => 3
+            ],
+        ];  
         User::insert($users);
-
-        // Insert records into the positions table
         Position::insert($positions);
-
         leavetype::insert($leavetype);
+        Employee::insert($employee);
     }
 }
