@@ -27,7 +27,7 @@ class LeaveFormController extends Controller
         'end_date' => 'required|date|after_or_equal:starts_date',
         'end_time' => 'required|date_format:H:i|after_or_equal:start_time',
         'comment' => 'nullable',
-        'image' => 'nullable|image|max:2048',
+        'image' => 'nullable|image|max:2097152',
     ]);    
 
     // Handle the image upload

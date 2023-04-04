@@ -26,7 +26,7 @@ class IsAdmin
     if ($user && in_array($user->role, $roles)) {
         return $next($request);
     }
+    error_log("Run IsAdmin.php");
     return redirect('home')->with('error', "You don't have access.");
 }
-
 }

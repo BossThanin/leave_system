@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Leavetype extends Model
 {
     protected $table = 'leavetype';
+    protected $fillable = [
+        'leavetype_name'
+    ];
 }

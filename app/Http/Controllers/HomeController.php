@@ -6,64 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    // /**
-    //  * Show the application dashboard.
-    //  *
-    //  * @return \Illuminate\Contracts\Support\Renderable
-    //  */
-    
-    //     /**
-    //  * Show the application dashboard.
-    //  *
-    //  * @return \Illuminate\Contracts\Support\Renderable
-    //  */
-    // public function adminHome()
-    // {
-    //     return view('adminHome');
-    // }
-    // public function index()
-    // {
-    //     if (auth()->check()) {
-    //         switch (auth()->user()->role) {
-    //             case 'admin':
-    //                 return redirect()->route('admin.home');
-    //             case 'pm':
-    //                 return redirect()->route('pm.home');
-    //             case 'employee':
-    //                 return redirect()->route('employee.home');
-    //             default:
-    //                 return redirect()->route('home');
-    //         }
-    //     }
-    //     return view('home');
-    // }
-    
-    // public function adminHome()
-    // {
-    //     return view('adminHome');
-    // }
-    
-    // public function pmHome()
-    // {
-    //     return view('pmHome');
-    // }
-    
-    // public function employeeHome()
-    // {
-    //     return view('employeeHome');
-    // }
     public function index()
 {
+    error_log("Run homecontroller.php");
     $user = auth()->user();
     if ($user) {
         switch ($user->role) {
@@ -83,17 +28,20 @@ class HomeController extends Controller
 
 public function adminHome()
 {
-    return view('adminHome');
+    $role = 1;
+    return view('admin/adminHome');
 }
 
 public function pmHome()
 {
-    return view('pmHome');
+    $role = 2;
+    return view('Project_Manager/pmHome');
 }
 
 public function employeeHome()
 {
-    return view('employeeHome');
+    $role = 3;
+    return view('Employee/employeeHome');
 }
 
 }

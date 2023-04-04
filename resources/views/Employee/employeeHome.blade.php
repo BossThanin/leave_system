@@ -17,6 +17,8 @@
                     {{ __('You are logged in!') }}
 
                     You are Employee.
+                    <button type="button" class="btn" style="background-color: #a3c3b5; color: #fff;"> <a href="/leave-form" style="color: #fff;">เพิ่มใบลา</a></button>
+                    <br><br>
                 </div>
             </div>
         </div>
