@@ -61,4 +61,8 @@ class HomeController extends Controller
     public function employeeReqDetail(){
         return view('Employee/employeeRequest_list_detail');
     }
+
+    public function profile(){
+        return view('profile');
+    }
 }
