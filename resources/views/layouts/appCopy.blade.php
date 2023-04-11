@@ -168,7 +168,7 @@
     <script src="../plugins/moment/moment.min.js"></script>
     <script src="../plugins/inputmask/jquery.inputmask.min.js"></script>
     <!-- date-range-picker -->
-    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- <script src="../plugins/daterangepicker/daterangepicker.js"></script> -->
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 
@@ -221,7 +221,7 @@
           $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
       
           //Date and time picker
-          $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+          //$('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
       
           //Date range picker
           $('#reservation').daterangepicker()
