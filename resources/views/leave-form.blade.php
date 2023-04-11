@@ -18,14 +18,10 @@
             </select>
             <br><br>
             <h5>ลาตั้งแต่ - ถึง</h5>
-            <label for="starts_date">เลือกวันที่:</label>
-            <input type="date" name="starts_date">
-            <label for="start_time">เลือกเวลา:</label>
-            <input type="time" name="start_time">
-            <label for="end_date">เลือกวันที่:</label>
-            <input type="date" name="end_date">
-            <label for="end_time">เลือกเวลา:</label>
-            <input type="time" name="end_time">
+            <label for="starts_date">เลือกวันที่และเวลา:</label>
+            <input type="datetime-local" name="starts_date">
+            <label for="end_date">เลือกวันที่และเวลา:</label>
+            <input type="datetime-local" name="end_date">
             <br><br>
             <label for="comment">เหตุผลการลา:</label><br><br>
             <textarea name="comment" rows="4" cols="100"></textarea>

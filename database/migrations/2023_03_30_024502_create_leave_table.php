@@ -34,10 +34,8 @@ return new class extends Migration
 
     Schema::create('leave', function (Blueprint $table) {
         $table->id();
-        $table->date('starts_date');
-        $table->time('start_time');
-        $table->date('end_date');
-        $table->time('end_time');
+        $table->datetime('starts_date');
+        $table->datetime('end_date');
         $table->string('comment', 255);
         $table->binary('image')->nullable();
         $table->unsignedBigInteger('leavetype_id');
