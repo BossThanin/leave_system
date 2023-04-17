@@ -79,9 +79,6 @@
                                                     <div class="form-group">
                                                         <label for="starts_date">ตั้งแต่</label>
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"><i class="far fa-clock"></i></span>
-                                                            </div>
                                                             <input type="datetime-local" name="starts_date" class="form-control">
                                                         </div>
                                                     </div>
@@ -90,9 +87,6 @@
                                                     <div class="form-group">
                                                         <label for="end_date">ถึง</label>
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"><i class="far fa-clock"></i></span>
-                                                            </div>
                                                             <input type="datetime-local" name="end_date" class="form-control">
                                                     </div>
                                                 </div>
