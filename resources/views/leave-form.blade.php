@@ -85,7 +85,11 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
+<<<<<<< HEAD
                                                         <label for="end_date">ถึง</label>
+=======
+                                                        <label for="end_date">ถึง                                                        </label>
+>>>>>>> 436fee00a0f00159d5ada447ab86d2ed06054642
                                                         <div class="input-group">
                                                             <input type="datetime-local" name="end_date" class="form-control">
                                                     </div>
