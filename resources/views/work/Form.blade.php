@@ -75,7 +75,7 @@
                                 <h3 class="card-title"><i class="fas fa-plus mr-2"></i>เพิ่มใบลา</h3>
                             </div>
                             <div class="card-body">
-                                <form action="" method="post" enctype="multipart/form-data">
+                                <form action="#" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <!-- card รายละเอียดใบลา -->
                                     <div class="row">
@@ -314,25 +314,37 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {{-- ปุ่ม --}}
                                     <div class="row">
                                         <div class="col-12 text-end">
                                             <a href="">
                                                 <button class="btn btn-secondary">ยกเลิก</button>
                                             </a>
-                                            <input type="submit" class="btn btn-primary" value="บันทึก">
+                                            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default" value="บันทึก">                                            
+                                            {{-- modal --}}
+                                            <div class="modal fade" id="modal-default">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h4 class="modal-title">บันทึกข้อมูล</h4>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <p class="text-start">ต้องการบันทึกข้อมูลข้อมูลหรือไม่??</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                      <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                                                      <input type="submit" class="btn btn-primary" value="บันทึก">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-
-                            {{-- <span>
-                                <div style="text-align: right;">
-                                    <input type="submit" class="btn btn-primary float-right mb-4 mr-4 mt-0"
-                                        value="บันทึก">
-                                    <a href="{{ route('home') }}"
-                                        class="btn btn-danger float-right mb-4 mr-4 mt-0">ยกเลิก</a>
-                                </div>
-                            </span> --}}
                         </div>
                     </div>
                 </div>

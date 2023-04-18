@@ -67,6 +67,15 @@ Route::group(['middleware' => ['auth']], function () {
         return view('work.emp.req_list_detail');
     });
 
+    Route::get('/emp/rep_list',function(){
+        return view('work.emp.rep_list');
+    });
+    Route::get('/emp/rep_list_detail',function(){
+        return view('work.emp.rep_list_detail');
+    });
+
+    
+
 
 
     //profile
