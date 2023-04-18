@@ -36,7 +36,8 @@ return new class extends Migration
         $table->id();
         $table->datetime('starts_date');
         $table->datetime('end_date');
-        $table->string('comment', 255);
+        $table->string('comment', 255)->nullable();
+        $table->string('reason', 255)->nullable();
         $table->binary('image')->nullable();
         $table->unsignedBigInteger('leavetype_id');
         $table->foreign('leavetype_id')->references('id')->on('leavetype');

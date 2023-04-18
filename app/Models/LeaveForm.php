@@ -17,6 +17,7 @@ class LeaveForm extends Model
         'starts_date',
         'end_date',
         'comment',
+        'reason',
         'image',
     ];
     public function employee()
