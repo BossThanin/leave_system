@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use APP\Http\Controllers\LeaveFormController;
 
+use function PHPUnit\Framework\returnSelf;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +49,25 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/employee/rep_list', [HomeController::class, 'employeeRepList'])->name('employee.rep_list')->middleware('role:3');
     Route::get('/employee/rep_list_detail' ,[HomeController::class, 'employeeRepDetail'])->name('employee.rep_detail')->middleware('role:3');
     Route::get('/employee/req_list_derail' ,[HomeController::class, 'employeeReqDetail'])->name('employee.req_derail')->middleware('role:3');
+
+    // work
+    Route::get('/form',function (){
+        return view('work.Form');
+    });
+
+    Route::get('/emp/index',function(){
+        return view('work.emp.index');
+    });
+
+    Route::get('/emp/req_list',function(){
+        return view('work.emp.req_list');
+    });
+
+    Route::get('/emp/req_list_detail',function(){
+        return view('work.emp.req_list_detail');
+    });
+
+
 
     //profile
     Route::get('/profile',[Homecontroller::class, 'profile'])->name('profile');
