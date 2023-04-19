@@ -100,8 +100,8 @@
         <!-- sidebar -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Big data agency -->
-            <a href="#" class="brand-link">
-                <span class="brand-text font-weight-bold">Big Data Agency</span>
+            <a href="{{route('index')}}" class="brand-link d-flex align-items-center">
+                <span class="brand-text font-weight-bold mx-auto"><img src="../img/logosidebar.png"></span>
             </a>
             <!-- Menu ต่างๆ -->
             <div class="sidebar">
@@ -144,7 +144,7 @@
                         </li>
                         <!-- Project manager -->
                         <li class="nav-item menu-open">
-                            <a href="#" class="nav-link {{ Request::routeIs('pm_req_list_emp') ? 'active' : ''}}">
+                            <a href="#" class="nav-link {{ Request::routeIs('pm_req_list_emp') || Request::routeIs('pm_req_list_emp_detail') ? 'active' : ''}}">
                                 <i class="nav-icon fas fa-user-tie"></i>
                                 <p>
                                     Project manager
@@ -153,7 +153,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{route('pm_req_list_emp')}}" class="nav-link {{Request::routeIS('pm_req_list_emp') ? 'active' : ''}}">
+                                    <a href="{{route('pm_req_list_emp')}}" class="nav-link {{Request::routeIS('pm_req_list_emp') || Request::routeIs('pm_req_list_emp_detail') ? 'active' : ''}}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>รายการคำขอใบลาพนักงาน</p>
                                     </a>

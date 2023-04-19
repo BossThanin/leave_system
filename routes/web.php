@@ -38,7 +38,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('role:1');
-
     Route::get('/pm/home', [HomeController::class, 'pmHome'])->name('pm.home')->middleware('role:2');
 
     Route::get('/employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('role:3');
@@ -64,6 +63,7 @@ Route::get('/req_list_detail',[\App\Http\Controllers\FrontendController::class,'
 Route::get('/rep_list',[\App\Http\Controllers\FrontendController::class,'rep_list'])->name('rep_list');
 Route::get('/rep_list_detail',[\App\Http\Controllers\FrontendController::class,'rep_list_detail'])->name('rep_list_detail');
 Route::get('/pm/req_list_emp',[\App\Http\Controllers\FrontendController::class,'pm_req_list_emp'])->name('pm_req_list_emp');
+Route::get('/pm/req_list_emp_detail',[\App\Http\Controllers\FrontendController::class,'pm_req_list_emp_detail'])->name('pm_req_list_emp_detail');
 Route::get('/profile',[\App\Http\Controllers\FrontendController::class,'profile'])->name('profile');
 // end work
 

@@ -15,258 +15,52 @@
                 </div>
             </div>
         </section>
+        {{--Main Content--}}
         <div class="content">
             <div class="container-fluid">
-
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title"><i class="fas fa-plus mr-2"></i>รายละเอียด</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                {{-- card left --}}
-                                <div class="col-md-8">
-                                    <!-- card รายละเอียดใบลา -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h3 class="card-title">รายละเอียดใบลา</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <!-- รหัสพนักงาน -->
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="">รหัสพนักงาน</label>
-                                                        <select name="" id="" class="form-control select2"
-                                                                style="width:100%;" disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                {{-- ชื่อ นามสกุล --}}
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="">ชื่อ นามสกุล</label>
-                                                        <select id="" name="" class="form-control select2"
-                                                                style="width: 100%;" disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                {{-- ตำแหน่ง --}}
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label for="">ตำแหน่ง</label>
-                                                        <select id="" name="" class="form-control select2"
-                                                                style="width: 100%;" disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <!-- ประเภทการลา -->
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label for="">ประเภทการลา</label>
-                                                        <select name="" id="" class="form-control select2"
-                                                                style="width:100%;" disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <!-- ลาตั้งแต่-->
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label for="starts_date">ตั้งแต่</label>
-                                                        <div class="input-group date" id="reservationdatetime2"
-                                                             data-target-input="nearest">
-                                                            <input type="text" class="form-control datetimepicker-input"
-                                                                   data-target="#reservationdatetime2" disabled>
-                                                            <div class="input-group-append"
-                                                                 data-target="#reservationdatetime2"
-                                                                 data-toggle="datetimepicker">
-                                                                <div class="input-group-text"><i
-                                                                        class="fa fa-calendar"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- ถึง-->
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label for="starts_date">ถึง</label>
-                                                        <div class="input-group date" id="reservationdatetime"
-                                                             data-target-input="nearest">
-                                                            <input type="text" class="form-control datetimepicker-input"
-                                                                   data-target="#reservationdatetime" disabled/>
-                                                            <div class="input-group-append"
-                                                                 data-target="#reservationdatetime"
-                                                                 data-toggle="datetimepicker">
-                                                                <div class="input-group-text"><i
-                                                                        class="fa fa-calendar"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                {{-- เหตุผลการลา --}}
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="comment">เหตุผลการลา</label>
-                                                        <textarea name="comment" class="form-control" rows="3"
-                                                                  placeholder="กรอกที่นี่..." style="height: 99px;"
-                                                                  disabled></textarea>
-                                                    </div>
-                                                </div>
-                                                {{-- เอกสารประกอบการลา --}}
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="file">เอกสารประกอบการลา</label>
-                                                        <div class="file">
-                                                            <a href="">
-                                                                <ins>ใบรับรองแพทย์.pdf</ins>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                {{-- เอกสารประกอบการลาเพิ่มเติม --}}
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="file">เอกสารประกอบการลาเพิ่มเติม</label>
-                                                        <div class="file">
-                                                            <a href="">
-                                                                <ins>รูปภาพผลการตรวจ ATK.png</ins>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- card ระหว่างการลามอบหมายให้ -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h3 class="card-title">ผู้ปฏิบัติงานแทน</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <!-- รหัสพนักงาน -->
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="">รหัสพนักงาน</label>
-                                                        <select id="" name=""
-                                                                class="form-control select2" style="width: 100%;"
-                                                                disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                {{-- ชื่อ นามสกุล --}}
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="">ชื่อ นามสกุล</label>
-                                                        <select id="" name=""
-                                                                class="form-control select2" style="width: 100%;"
-                                                                disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                {{-- ตำแหน่ง --}}
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label for="">ตำแหน่ง</label>
-                                                        <select id="" name=""
-                                                                class="form-control select2" style="width: 100%;"
-                                                                disabled>
-
-                                                            <option value="">hello</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="">กรณีไม่มีผู้ปฏิบัติงานแทน สามารถ
-                                                            (ติดต่อ)</label>
-                                                        <input type="text" class="form-control" value="089266xxxx"
-                                                               disabled>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- card right --}}
-                                <div class="col-md-4">
-                                    <!-- card สถานะ -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h3 class="card-title">สถานะ</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="text-center">
-                                                <h1 class="display-4 font-weight-bold text-secondary">
-                                                    กำลังดำเนินการ</h1>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- card ความเห็น Project manager -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h3 class="card-title">ความเห็น Project manager</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <form action="" method="">
-                                                @csrf
-                                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="name"
-                                                           id="" checked>
-                                                    <label class="form-check-label" for="">
-                                                        อนญาตตามสิทธิ์พนักงาน
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="name"
-                                                           id="">
-                                                    <label class="form-check-label" for="">
-                                                        ไม่อนุญาต เนื่องจาก
-                                                        <span><ins>Lorem ipsum dolor sit amet.</ins></span>
-                                                    </label>
-                                                </div>
-                                                <input type="submit" name="" id="" class="btn btn-primary"
-                                                       placeholder="save">
-                                            </form>
-
-                                        </div>
-                                    </div>
-
-                                </div>
+                {{-- รายการคำขอใบลา --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">รายการคำขอใบลา</h3>
                             </div>
-                            <div class="row">
-                                <div class="col-12 text-end">
-                                    {{-- <a href="">
-                                        <button class="btn btn-primary">พิมพ์ใบลา</button>
-                                    </a> --}}
-                                    <a href="">
-                                        <button class="btn btn-primary">save</button>
-                                    </a>
-                                </div>
+                            <div class="card-body">
+                                <table id="table-main-notification" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>วันที่ยื่นคำร้อง</th>
+                                        <th>ประเภทการลา</th>
+                                        <th>วันที่ลาตั้งแต่</th>
+                                        <th>ถึง</th>
+                                        <th>ลาทั้งหมด</th>
+                                        <th>จาก</th>
+                                        <th>สถานะ</th>
+                                        <th></th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @for ($i = 0; $i < 12; $i++)
+                                        <tr>
+                                            <td>12-12-12 12:00AM</td>
+                                            <td>ลาป่วย</td>
+                                            <td>12-12-12 12:00AM</td>
+                                            <td>12-12-12 12:00AM</td>
+                                            <td>2 วัน 2 ชั่วโมง 2 นาที</td>
+                                            <td>นายปรีดี พยมพงษ์</td>
+                                            <td>อนุมัติ</td>
+                                            <td>
+                                                <a href="{{route('pm_req_list_emp_detail')}}">
+                                                    <button type="button" class="btn btn-sm btn-block btn-secondary">
+                                                        ดู
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endfor
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

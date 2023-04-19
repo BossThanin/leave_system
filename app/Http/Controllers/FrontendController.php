@@ -33,6 +33,9 @@ class FrontendController extends Controller
     public function pm_req_list_emp(){
         return view('work.pm.req_list_emp');
     }
+    public function pm_req_list_emp_detail(){
+        return view('work.pm.req_list_emp_detail');
+    }
 
     public function profile(){
         return view('work.profile');
