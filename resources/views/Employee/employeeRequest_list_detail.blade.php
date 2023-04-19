@@ -12,7 +12,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $query = "SELECT positions.position_name, employee.position_id , employee.id, employee.first_name, employee.last_name, leavetype.leavetype_name as leave_type, `leave`.starts_date, `leave`.end_date, `leave`.comment, `leave`.`image`
+    $query = "SELECT `leave`.reason, positions.position_name, employee.position_id, employee.phone_number ,  employee.id, employee.first_name, employee.last_name, leavetype.leavetype_name as leave_type, `leave`.starts_date, `leave`.end_date, `leave`.reason, `leave`.`file`
         FROM `leave`
         JOIN employee ON `leave`.employee_id = employee.id
         JOIN leavetype ON `leave`.leavetype_id = leavetype.id
@@ -25,14 +25,16 @@
     $options_positions = "";
     $options_leavetype = "";
     $options_time = "";
-    $options_comment = "";
+    $options_reason = "";
+    $options_phonenumber = "";
     while($row = $result->fetch_assoc()){
         $options_id .= "<option value='" . $row['id'] . "'>" . $row['id'] . "</option>";
         $options_name .= "<option value='" . $row['first_name'] . "'>" . $row['first_name'] ." ". $row['last_name'] . "</option>";
         $options_leavetype .= "<option value='" . $row['leave_type'] . "'>" . $row['leave_type'] . "</option>";
         $options_time .= "<option value='" . $row['starts_date'] . "'>" . date('Y-m-d H:i', strtotime($row['starts_date'])) ." - ". date('Y-m-d H:i', strtotime($row['end_date'])) . "</option>";
-        $options_comment .= "<option value='" . $row['comment'] . "'>" . $row['comment'] . "</option>";
         $options_positions .= "<option value='" . $row['id'] . "'>" . $row['position_name'] . "</option>";
+        $options_reason .= "<option value='" . $row['reason'] . "'>" . $row['reason'];
+        $options_phonenumber = "<option value='" . $row['phone_number'] . "'>" . $row['phone_number'] . "</option>";
     }
     $conn->close();
 ?>
@@ -137,7 +139,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="">เหตุผลการลา</label>
-                                                        <p class="form-control" rows="3" placeholder="กรอกที่นี่..." style="height: 99px;" <?php echo $options_comment; ?> ></p>
+                                                        <textarea class="form-control" rows="3" placeholder="กรอกที่นี่..." style="height: 99px;" disabled="disabled" <?php echo $options_reason; ?>></textarea>
                                                     </div>
                                                 </div>
                                             </div>

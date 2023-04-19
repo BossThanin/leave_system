@@ -7,6 +7,7 @@ use App\Models\Employee;
 use App\Models\User;
 use App\Models\Position;
 use App\Models\Leavetype;
+use App\Models\Notifications;
 
 class CreateUsersSeeder extends Seeder
 {
@@ -81,22 +82,38 @@ class CreateUsersSeeder extends Seeder
             [
                 'first_name' => 'Tony',
                 'last_name' => 'Stark',
-                'position_id' => 1
+                'position_id' => 1,
+                'phone_number' => '0111111111'
             ],
             [
                 'first_name' => 'Thor',
                 'last_name' => 'Odinson',
-                'position_id' => 2
+                'position_id' => 2,
+                'phone_number' => '0222222222'
             ],
             [
                 'first_name' => 'Captain',
                 'last_name' => 'America',
-                'position_id' => 3
+                'position_id' => 3,
+                'phone_number' => '0333333333'
             ],
         ];  
+
+        $notifications = [
+            [
+                'status_name' => 'รอดำเนินการ'
+            ],
+            [
+                'status_name' => 'อนุมัติ'
+            ],
+            [
+                'status_name' => 'ไม่อนุมัติ'
+            ],
+        ]; 
         User::insert($users);
         Position::insert($positions);
         leavetype::insert($leavetype);
         Employee::insert($employee);
+        Notifications::insert($notifications);
     }
 }

@@ -85,11 +85,7 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-<<<<<<< HEAD
                                                         <label for="end_date">ถึง</label>
-=======
-                                                        <label for="end_date">ถึง                                                        </label>
->>>>>>> 436fee00a0f00159d5ada447ab86d2ed06054642
                                                         <div class="input-group">
                                                             <input type="datetime-local" name="end_date" class="form-control">
                                                     </div>
@@ -99,8 +95,8 @@
                                             <div class="row">
                                                 <div class="col-md-7">
                                                     <div class="form-group">
-                                                        <label for="comment">เหตุผลการลา</label>
-                                                        <textarea name="comment" class="form-control" rows="3" placeholder="กรอกที่นี่..." style="height: 99px;"></textarea>
+                                                        <label for="reason">เหตุผลการลา</label>
+                                                        <textarea name="reason" class="form-control" rows="3" placeholder="กรอกที่นี่..." style="height: 99px;"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,8 +107,8 @@
                                                         <label for="image">อัพโหลดไฟล์หลักฐาน</label>
                                                         <div class="input-group">
                                                             <div class="custom-file">
-                                                                <input type="file" name="image" accept="image/*" maxlength="2097152" class="custom-file-input" onchange="updateLabel(this)">
-                                                                <label class="custom-file-label" for="image">อัปโหลด</label>
+                                                                <input type="file" name="file" accept="image/*" maxlength="2097152" class="custom-file-input" onchange="updateLabel(this)">
+                                                                <label class="custom-file-label" for="file">อัปโหลด</label>
                                                             </div>
                                                         </div>
                                                     </div>

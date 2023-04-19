@@ -23,7 +23,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $query = "SELECT employee.first_name, employee.last_name, leavetype.leavetype_name as leave_type, `leave`.starts_date, `leave`.end_date, `leave`.comment, `leave`.`image`
+            $query = "SELECT employee.first_name, employee.last_name, leavetype.leavetype_name as leave_type, `leave`.starts_date, `leave`.end_date, `leave`.reason, `leave`.`file`
                     FROM `leave`
                     JOIN employee ON `leave`.employee_id = employee.id
                     JOIN leavetype ON `leave`.leavetype_id = leavetype.id
@@ -37,9 +37,9 @@
                 echo "Leave Type: " . $row['leave_type'] . "<br>";
                 echo "Start Date: " . $row['starts_date'] . "<br>";
                 echo "End Date: " . $row['end_date'] . "<br>";
-                echo "Comment: " . $row['comment'] . "<br>";
+                echo "reason: " . $row['reason'] . "<br>";
                 echo "เอกสารที่เกี่ยวข้อง"."<br>";
-                $imgData = base64_encode($row['image']);
+                $imgData = base64_encode($row['file']);
                 echo '<img src="data:image/jpeg;base64,'.$imgData.'">'."<br>";
             }
             $conn->close();

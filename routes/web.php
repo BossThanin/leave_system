@@ -18,6 +18,9 @@ use APP\Http\Controllers\LeaveFormController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/approved', function () {
+    return view('approved');
+});
 Route::get('/connection', function () {
     return view('connection');
 });
@@ -55,6 +58,4 @@ Route::group(['middleware' => ['auth']], function () {
 });
 Route::get('/leave-form', 'App\Http\Controllers\LeaveFormController@create')->name('leave-form.create');
 Route::post('/leave-form', 'App\Http\Controllers\LeaveFormController@store')->name('leave-form.store');
-Route::put('/leave-form/{id}', [LeaveFormController::class, 'update']);
-
-
+Route::put('/leave-form', 'App\Http\Controllers\LeaveFormController@update')->name('leave-form.update');
