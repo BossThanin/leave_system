@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.layout')
 
 @section('content')
     {{-- Content --}}
@@ -42,7 +42,8 @@
                                                             <div class="form-group">
                                                                 <label for="">รหัสพนักงาน</label>
                                                                 <select name="" id=""
-                                                                    class="form-control select2" style="width:100%;">
+                                                                        class="form-control select2"
+                                                                        style="width:100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -54,7 +55,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ชื่อ นามสกุล</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -66,7 +68,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ตำแหน่ง</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -78,7 +81,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ประเภทการลา</label>
                                                                 <select name="" id=""
-                                                                    class="form-control select2" style="width:100%;">
+                                                                        class="form-control select2"
+                                                                        style="width:100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -89,10 +93,16 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label for="starts_date">ตั้งแต่</label>
-                                                                <div class="input-group date" id="reservationdatetime2" data-target-input="nearest">
-                                                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime2">
-                                                                    <div class="input-group-append" data-target="#reservationdatetime2" data-toggle="datetimepicker">
-                                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                                <div class="input-group date" id="reservationdatetime2"
+                                                                     data-target-input="nearest">
+                                                                    <input type="text"
+                                                                           class="form-control datetimepicker-input"
+                                                                           data-target="#reservationdatetime2">
+                                                                    <div class="input-group-append"
+                                                                         data-target="#reservationdatetime2"
+                                                                         data-toggle="datetimepicker">
+                                                                        <div class="input-group-text"><i
+                                                                                class="fa fa-calendar"></i></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -101,10 +111,16 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label for="starts_date">ถึง</label>
-                                                                <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
-                                                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime" />
-                                                                    <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
-                                                                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                                <div class="input-group date" id="reservationdatetime"
+                                                                     data-target-input="nearest">
+                                                                    <input type="text"
+                                                                           class="form-control datetimepicker-input"
+                                                                           data-target="#reservationdatetime"/>
+                                                                    <div class="input-group-append"
+                                                                         data-target="#reservationdatetime"
+                                                                         data-toggle="datetimepicker">
+                                                                        <div class="input-group-text"><i
+                                                                                class="fa fa-calendar"></i></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -113,7 +129,9 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label for="comment">เหตุผลการลา</label>
-                                                                <textarea name="comment" class="form-control" rows="3" placeholder="กรอกที่นี่..." style="height: 99px;"></textarea>
+                                                                <textarea name="comment" class="form-control" rows="3"
+                                                                          placeholder="กรอกที่นี่..."
+                                                                          style="height: 99px;"></textarea>
                                                             </div>
                                                         </div>
                                                         {{-- เอกสารประกอบการลา --}}
@@ -123,10 +141,11 @@
                                                                 <div class="input-group">
                                                                     <div class="custom-file">
                                                                         <input type="file" name="image" accept="image/*"
-                                                                            maxlength="2097152" class="custom-file-input"
-                                                                            onchange="updateLabel(this)">
+                                                                               maxlength="2097152"
+                                                                               class="custom-file-input"
+                                                                               onchange="updateLabel(this)">
                                                                         <label class="custom-file-label"
-                                                                            for="image">อัปโหลด</label>
+                                                                               for="image">อัปโหลด</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -138,10 +157,11 @@
                                                                 <div class="input-group">
                                                                     <div class="custom-file">
                                                                         <input type="file" name="image" accept="image/*"
-                                                                            maxlength="2097152" class="custom-file-input"
-                                                                            onchange="updateLabel(this)">
+                                                                               maxlength="2097152"
+                                                                               class="custom-file-input"
+                                                                               onchange="updateLabel(this)">
                                                                         <label class="custom-file-label"
-                                                                            for="image">อัปโหลด</label>
+                                                                               for="image">อัปโหลด</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -172,7 +192,8 @@
                                                             <div class="form-group">
                                                                 <label for="">รหัสพนักงาน</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -184,7 +205,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ชื่อ นามสกุล</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -196,7 +218,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ตำแหน่ง</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -222,7 +245,8 @@
                                                             <div class="form-group">
                                                                 <label for="">รหัสพนักงาน</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -234,7 +258,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ชื่อ นามสกุล</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -246,7 +271,8 @@
                                                             <div class="form-group">
                                                                 <label for="">ตำแหน่ง</label>
                                                                 <select id="" name=""
-                                                                    class="form-control select2" style="width: 100%;">
+                                                                        class="form-control select2"
+                                                                        style="width: 100%;">
                                                                     @for ($i = 0; $i < 12; $i++)
                                                                         <option value="">{{ $i }}</option>
                                                                     @endfor
@@ -271,25 +297,29 @@
                                             <a href="">
                                                 <button class="btn btn-secondary">ยกเลิก</button>
                                             </a>
-                                            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default" value="บันทึก">
+                                            <input type="button" class="btn btn-primary" data-toggle="modal"
+                                                   data-target="#modal-default" value="บันทึก">
                                             {{-- modal --}}
                                             <div class="modal fade" id="modal-default">
                                                 <div class="modal-dialog">
-                                                  <div class="modal-content">
-                                                    <div class="modal-header">
-                                                      <h4 class="modal-title">บันทึกข้อมูล</h4>
-                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                      </button>
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">บันทึกข้อมูล</h4>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p class="text-start">ต้องการบันทึกข้อมูลข้อมูลหรือไม่??</p>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default"
+                                                                    data-dismiss="modal">ยกเลิก
+                                                            </button>
+                                                            <input type="submit" class="btn btn-primary" value="บันทึก">
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-body">
-                                                      <p class="text-start">ต้องการบันทึกข้อมูลข้อมูลหรือไม่??</p>
-                                                    </div>
-                                                    <div class="modal-footer justify-content-between">
-                                                      <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
-                                                      <input type="submit" class="btn btn-primary" value="บันทึก">
-                                                    </div>
-                                                  </div>
                                                 </div>
                                             </div>
                                         </div>

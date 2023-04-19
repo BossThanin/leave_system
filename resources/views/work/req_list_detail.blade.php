@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.layout')
 
 @section('content')
     <div class="content-wrapper">
@@ -38,7 +38,7 @@
                                                     <div class="form-group">
                                                         <label for="">รหัสพนักงาน</label>
                                                         <select name="" id="" class="form-control select2"
-                                                            style="width:100%;"disabled>
+                                                                style="width:100%;" disabled>
 
                                                             <option value="">hello</option>
 
@@ -50,7 +50,7 @@
                                                     <div class="form-group">
                                                         <label for="">ชื่อ นามสกุล</label>
                                                         <select id="" name="" class="form-control select2"
-                                                            style="width: 100%;" disabled>
+                                                                style="width: 100%;" disabled>
 
                                                             <option value="">hello</option>
 
@@ -62,7 +62,7 @@
                                                     <div class="form-group">
                                                         <label for="">ตำแหน่ง</label>
                                                         <select id="" name="" class="form-control select2"
-                                                            style="width: 100%;"disabled>
+                                                                style="width: 100%;" disabled>
 
                                                             <option value="">hello</option>
 
@@ -74,7 +74,7 @@
                                                     <div class="form-group">
                                                         <label for="">ประเภทการลา</label>
                                                         <select name="" id="" class="form-control select2"
-                                                            style="width:100%;"disabled>
+                                                                style="width:100%;" disabled>
 
                                                             <option value="">hello</option>
 
@@ -86,13 +86,14 @@
                                                     <div class="form-group">
                                                         <label for="starts_date">ตั้งแต่</label>
                                                         <div class="input-group date" id="reservationdatetime2"
-                                                            data-target-input="nearest">
+                                                             data-target-input="nearest">
                                                             <input type="text" class="form-control datetimepicker-input"
-                                                                data-target="#reservationdatetime2"disabled>
+                                                                   data-target="#reservationdatetime2" disabled>
                                                             <div class="input-group-append"
-                                                                data-target="#reservationdatetime2"
-                                                                data-toggle="datetimepicker">
-                                                                <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                                                 data-target="#reservationdatetime2"
+                                                                 data-toggle="datetimepicker">
+                                                                <div class="input-group-text"><i
+                                                                        class="fa fa-calendar"></i>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -103,13 +104,13 @@
                                                     <div class="form-group">
                                                         <label for="starts_date">ถึง</label>
                                                         <div class="input-group date" id="reservationdatetime"
-                                                            data-target-input="nearest">
+                                                             data-target-input="nearest">
                                                             <input type="text"
-                                                                class="form-control datetimepicker-input"
-                                                                data-target="#reservationdatetime" disabled />
+                                                                   class="form-control datetimepicker-input"
+                                                                   data-target="#reservationdatetime" disabled/>
                                                             <div class="input-group-append"
-                                                                data-target="#reservationdatetime"
-                                                                data-toggle="datetimepicker">
+                                                                 data-target="#reservationdatetime"
+                                                                 data-toggle="datetimepicker">
                                                                 <div class="input-group-text"><i
                                                                         class="fa fa-calendar"></i></div>
                                                             </div>
@@ -120,8 +121,9 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="comment">เหตุผลการลา</label>
-                                                        <textarea name="comment" class="form-control" rows="3" placeholder="กรอกที่นี่..." style="height: 99px;"
-                                                            disabled></textarea>
+                                                        <textarea name="comment" class="form-control" rows="3"
+                                                                  placeholder="กรอกที่นี่..." style="height: 99px;"
+                                                                  disabled></textarea>
                                                     </div>
                                                 </div>
                                                 {{-- เอกสารประกอบการลา --}}
@@ -129,7 +131,9 @@
                                                     <div class="form-group">
                                                         <label for="file">เอกสารประกอบการลา</label>
                                                         <div class="file">
-                                                            <a href=""><ins>ใบรับรองแพทย์.pdf</ins></a>
+                                                            <a href="">
+                                                                <ins>ใบรับรองแพทย์.pdf</ins>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -138,7 +142,9 @@
                                                     <div class="form-group">
                                                         <label for="file">เอกสารประกอบการลาเพิ่มเติม</label>
                                                         <div class="file">
-                                                            <a href=""><ins>รูปภาพผลการตรวจ ATK.png</ins></a>
+                                                            <a href="">
+                                                                <ins>รูปภาพผลการตรวจ ATK.png</ins>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -157,7 +163,8 @@
                                                     <div class="form-group">
                                                         <label for="">รหัสพนักงาน</label>
                                                         <select id="" name=""
-                                                            class="form-control select2" style="width: 100%;" disabled>
+                                                                class="form-control select2" style="width: 100%;"
+                                                                disabled>
 
                                                             <option value="">hello</option>
 
@@ -169,7 +176,8 @@
                                                     <div class="form-group">
                                                         <label for="">ชื่อ นามสกุล</label>
                                                         <select id="" name=""
-                                                            class="form-control select2" style="width: 100%;" disabled>
+                                                                class="form-control select2" style="width: 100%;"
+                                                                disabled>
 
                                                             <option value="">hello</option>
 
@@ -181,7 +189,8 @@
                                                     <div class="form-group">
                                                         <label for="">ตำแหน่ง</label>
                                                         <select id="" name=""
-                                                            class="form-control select2" style="width: 100%;"disabled>
+                                                                class="form-control select2" style="width: 100%;"
+                                                                disabled>
 
                                                             <option value="">hello</option>
 
@@ -193,7 +202,7 @@
                                                         <label for="">กรณีไม่มีผู้ปฏิบัติงานแทน สามารถ
                                                             (ติดต่อ)</label>
                                                         <input type="text" class="form-control" value="089266xxxx"
-                                                            disabled>
+                                                               disabled>
                                                     </div>
                                                 </div>
                                             </div>
@@ -232,14 +241,14 @@
                                                 us rem?</p>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name=""
-                                                    id="" checked disabled>
+                                                       id="" checked disabled>
                                                 <label class="form-check-label" for="">
                                                     อนญาตตามสิทธิ์พนักงาน
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name=""
-                                                    id="" disabled>
+                                                       id="" disabled>
                                                 <label class="form-check-label" for="">
                                                     ไม่อนุญาต เนื่องจาก
                                                     <span><ins>Lorem ipsum dolor sit amet.</ins></span>
@@ -267,21 +276,21 @@
                                         <div class="card-body">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name=""
-                                                    id="" checked disabled>
+                                                       id="" checked disabled>
                                                 <label class="form-check-label" for="">
                                                     ไม่ต้องชดเชยเวลา
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name=""
-                                                    id="" disabled>
+                                                       id="" disabled>
                                                 <label class="form-check-label" for="">
                                                     ไม่รับค่าแรงตามจำนวนวันที่ลา
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name=""
-                                                    id="" disabled>
+                                                       id="" disabled>
                                                 <label class="form-check-label" for="">
                                                     ชดเชยวันลา
                                                     <span><ins>จำนวน 4 วัน 5 ชม. 0 นาที </ins></span>

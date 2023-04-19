@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.layout')
 
 
 @section('content')
@@ -167,165 +167,180 @@
                             <div class="card-body">
                                 <table id="table-main-notification" class="table table-bordered table-hover">
                                     <thead>
-                                        <tr>
-                                            <th>วันที่แจ้งเตือน</th>
-                                            <th>จาก</th>
-                                            <th>ประเภท</th>
-                                            <th>สถานะ</th>
-                                            <th></th>
-                                        </tr>
+                                    <tr>
+                                        <th>วันที่แจ้งเตือน</th>
+                                        <th>จาก</th>
+                                        <th>ประเภท</th>
+                                        <th>สถานะ</th>
+                                        <th></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>12/12/12</td>
-                                            <td>ภูวเดช พาณิชยโสภา</td>
-                                            <td>ลาป่วย</td>
-                                            <td>กำลังดำเนินการ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/12/12</td>
-                                            <td>vvvvภูวเดช พาณิชยโสภา</td>
-                                            <td>ลากิจ</td>
-                                            <td>อนุมัติ</td>
-                                            <td>
-                                                <button type="button"
-                                                    class="btn btn-block btn-secondary">ดู</button>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>12/12/12</td>
+                                        <td>ภูวเดช พาณิชยโสภา</td>
+                                        <td>ลาป่วย</td>
+                                        <td>กำลังดำเนินการ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11/12/12</td>
+                                        <td>vvvvภูวเดช พาณิชยโสภา</td>
+                                        <td>ลากิจ</td>
+                                        <td>อนุมัติ</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-block btn-secondary">ดู
+                                            </button>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>

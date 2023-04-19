@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.layout')
 
 @section('content')
     {{-- Content --}}
@@ -34,35 +34,37 @@
                             <div class="card-body">
                                 <table id="table-main-notification" class="table table-bordered table-hover">
                                     <thead>
-                                        <tr>
-                                            <th>วันที่ยื่นคำร้อง</th>
-                                            <th>ประเภทการลา</th>
-                                            <th>วันที่ลาตั้งแต่</th>
-                                            <th>ถึง</th>
-                                            <th>ลาทั้งหมด</th>
-                                            <th>ผู้ทำงานแทน</th>
-                                            <th>สถานะ</th>
-                                            <th></th>
+                                    <tr>
+                                        <th>วันที่ยื่นคำร้อง</th>
+                                        <th>ประเภทการลา</th>
+                                        <th>วันที่ลาตั้งแต่</th>
+                                        <th>ถึง</th>
+                                        <th>ลาทั้งหมด</th>
+                                        <th>ผู้ทำงานแทน</th>
+                                        <th>สถานะ</th>
+                                        <th></th>
 
-                                        </tr>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        @for ($i = 0; $i < 12; $i++)
-                                            <tr>
-                                                <td>12-12-12 12:00AM</td>
-                                                <td>ลาป่วย</td>
-                                                <td>12-12-12 12:00AM</td>
-                                                <td>12-12-12 12:00AM</td>
-                                                <td>2 วัน 2 ชั่วโมง 2 นาที</td>
-                                                <td>นายปรีดี พยมพงษ์</td>
-                                                <td>อนุมัติ</td>
-                                                <td>
-                                                    <a href="{{ url('/emp/req_list_detail') }}">
-                                                        <button type="button" class="btn btn-sm btn-block btn-secondary">ดู</button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        @endfor
+                                    @for ($i = 0; $i < 12; $i++)
+                                        <tr>
+                                            <td>12-12-12 12:00AM</td>
+                                            <td>ลาป่วย</td>
+                                            <td>12-12-12 12:00AM</td>
+                                            <td>12-12-12 12:00AM</td>
+                                            <td>2 วัน 2 ชั่วโมง 2 นาที</td>
+                                            <td>นายปรีดี พยมพงษ์</td>
+                                            <td>อนุมัติ</td>
+                                            <td>
+                                                <a href="{{route('req_list_detail')}}">
+                                                    <button type="button" class="btn btn-sm btn-block btn-secondary">
+                                                        ดู
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endfor
                                     </tbody>
                                 </table>
                             </div>
@@ -70,7 +72,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 @endsection

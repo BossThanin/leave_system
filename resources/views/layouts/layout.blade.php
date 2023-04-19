@@ -43,12 +43,6 @@
 
     <!-- style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-
-    <style>
-        .card-body{
-            padding-bottom: 0px;
-        }
-    </style>
 </head>
 
 <body class="sidebar-mini layout-fixed control-sidebar-slide-open layout-navbar-fixed">
@@ -84,7 +78,7 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile') }}">
+                            <a class="dropdown-item" href="{{url('/profile')}}">
                                 โปรไฟล์ส่วนตัว
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -144,6 +138,24 @@
                                     <a href="{{route('rep_list')}}" class="nav-link {{Request::routeIs('rep_list') || Request::routeIs('rep_list_detail') ? 'active' : ''}}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>รายการคำขอปฎิบัติแทน</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Project manager -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link {{ Request::routeIs('pm_req_list_emp') ? 'active' : ''}}">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>
+                                    Project manager
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('pm_req_list_emp')}}" class="nav-link {{Request::routeIS('pm_req_list_emp') ? 'active' : ''}}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>รายการคำขอใบลาพนักงาน</p>
                                     </a>
                                 </li>
                             </ul>
