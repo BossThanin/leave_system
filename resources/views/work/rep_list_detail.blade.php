@@ -1,53 +1,4 @@
 @extends('layouts.navbar')
-<!-- sidebar -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Big data agency -->
-    <a href="#" class="brand-link">
-        <span class="brand-text font-weight-bold">Big Data Agency</span>
-    </a>
-    <!-- Menu ต่างๆ -->
-    <div class="sidebar">
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- เมนูหลัก -->
-                <li class="nav-item">
-                    <a href="{{ route('employee.home') }}" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            เมนูหลัก
-                        </p>
-                    </a>
-                </li>
-
-                <!-- รายการคำขอ -->
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-file-alt"></i>
-                        <p>
-                            รายการคำขอ
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('employee.req_list') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>รายการคำขอใบลา</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('employee.rep_list') }}" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>รายการคำขอปฎิบัติแทน</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-</aside>
 
 @section('content')
     {{-- Content --}}
@@ -154,7 +105,7 @@
                                                     {{-- เอกสารประกอบการลาเพิ่มเติม (ถ้ามี)--}}
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for=""></label>
+                                                            <label for="">เอกสารประกอบการลาเพิ่มเติม (ถ้ามี)</label>
                                                             <div class="">
                                                                 <a href=""><ins>ใบรับรองแพทย์.png</ins></a>
                                                             </div>
@@ -169,10 +120,10 @@
                                     <div class="col-12 text-end">
                                         <a href="">
                                             <button class="btn btn-danger">ปฏิเสธปฏิบัติแทน</button>
-                                        </a>                     
+                                        </a>
                                         <a href="">
                                             <button class="btn btn-primary">รับทราบ</button>
-                                        </a>                     
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -182,5 +133,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection

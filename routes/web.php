@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/pm/home', [HomeController::class, 'pmHome'])->name('pm.home')->middleware('role:2');
 
     Route::get('/employee/home', [HomeController::class, 'employeeHome'])->name('employee.home')->middleware('role:3');
-    
+
     //test frontend go page
     Route::get('/employee/req_list', [HomeController::class, 'employeeReqList'])->name('employee.req_list')->middleware('role:3');
     Route::get('/employee/req_list_form', [HomeController::class, 'employeeReqForm'])->name('employee.req_list_form')->middleware('role:3');
@@ -51,37 +51,18 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/employee/req_list_derail' ,[HomeController::class, 'employeeReqDetail'])->name('employee.req_derail')->middleware('role:3');
 
     // work
-    Route::get('/form',function (){
-        return view('work.Form');
-    });
-
-    Route::get('/emp/index',function(){
-        return view('work.emp.index');
-    });
-
-    Route::get('/emp/req_list',function(){
-        return view('work.emp.req_list');
-    });
-
-    Route::get('/emp/req_list_detail',function(){
-        return view('work.emp.req_list_detail');
-    });
-
-    Route::get('/emp/rep_list',function(){
-        return view('work.emp.rep_list');
-    });
-    Route::get('/emp/rep_list_detail',function(){
-        return view('work.emp.rep_list_detail');
-    });
-
-    
-
-
+    Route::get('/index',[\App\Http\Controllers\FrontendController::class,'index'])->name('index');
+    Route::get('/form',[\App\Http\Controllers\FrontendController::class,'form'])->name('form');
+    Route::get('/req_list',[\App\Http\Controllers\FrontendController::class,'req_list'])->name('req_list');
+    Route::get('/req_list_detail',[\App\Http\Controllers\FrontendController::class,'req_list_detail'])->name('req_list_detail');
+    Route::get('/rep_list',[\App\Http\Controllers\FrontendController::class,'rep_list'])->name('rep_list');
+    Route::get('/rep_list_detail',[\App\Http\Controllers\FrontendController::class,'rep_list_detail'])->name('rep_list_detail');
+    Route::get('/pm/req_list_emp',[\App\Http\Controllers\FrontendController::class,'pm_req_list_emp'])->name('pm_req_list_emp');
 
     //profile
     Route::get('/profile',[Homecontroller::class, 'profile'])->name('profile');
     // end test frontend go page
-    
+
 });
 Route::get('/leave-form', 'App\Http\Controllers\LeaveFormController@create')->name('leave-form.create');
 Route::post('/leave-form', 'App\Http\Controllers\LeaveFormController@store')->name('leave-form.store');

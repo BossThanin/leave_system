@@ -43,6 +43,12 @@
 
     <!-- style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
+    <style>
+        .card-body{
+            padding-bottom: 0px;
+        }
+    </style>
 </head>
 
 <body class="sidebar-mini layout-fixed control-sidebar-slide-open layout-navbar-fixed">
@@ -96,6 +102,57 @@
                 @endguest
             </ul>
         </nav>
+
+        <!-- sidebar -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Big data agency -->
+            <a href="#" class="brand-link">
+                <span class="brand-text font-weight-bold">Big Data Agency</span>
+            </a>
+            <!-- Menu ต่างๆ -->
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- เมนูหลัก -->
+                        <li class="nav-item">
+                            <a href="{{route('index')}}" class="nav-link {{ Request::routeIS('index') ? 'active' : ''}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    เมนูหลัก
+                                </p>
+                            </a>
+                        </li>
+
+                        <!-- รายการคำขอ -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link {{ Request::routeIs('req_list') || Request::routeIs('req_list_detail') || Request::routeIs('form') || Request::routeIs('rep_list_detail') || Request::routeIs('rep_list')? 'active' : ''}}">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <p>
+                                    รายการคำขอ
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('req_list')}}" class="nav-link {{ Request::routeIs('req_list') || Request::routeIs('req_list_detail') || Request::routeIs('form')? 'active' : ''}}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>รายการคำขอใบลา</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('rep_list')}}" class="nav-link {{Request::routeIs('rep_list') || Request::routeIs('rep_list_detail') ? 'active' : ''}}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>รายการคำขอปฎิบัติแทน</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </aside>
 
         <section class="">
             @yield('content')
